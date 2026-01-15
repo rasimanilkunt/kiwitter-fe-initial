@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { set, useForm } from "react-hook-form";
 import axios from "../utils/axios.js";
 import { toast } from "react-toastify";
-import { setAuthToken } from "../utils/auth.js";
+import useAuth  from "../hooks/useAuth.jsx";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
@@ -20,13 +20,16 @@ export default function Login() {
     mode: "onChange",
   });
 
+  const { login } = useAuth();
+  
   const history = useHistory();
 
   function handleLogin(data) {
+    
     axios
       .post("/login", data)
       .then(resp => {
-        setAuthToken(resp.data.token, resp.data.username);
+        login(resp.data.token);
         toast.success("Giriş başarılı!");
         setTimeout(() => {
           history.push("/");

@@ -1,18 +1,13 @@
-import { Link } from "react-router-dom";
-export default function PageLayout({ children }) {
+import Header from "../components/header.jsx";
+
+export default function PageLayout({ children, className = "container mx-auto bg-white min-h-96 rounded-xl shadow-xl p-6" }) {
   return (
     <div className="relative">
       <div className="sticky top-0 bg-white shadow-md">
-        <header className="container mx-auto p-6 text-primary flex flex-row justify-between items-center ">
-          <Link to= "/"> <h1 className= 'text-2xl font-bold'>Kiwitter</h1></Link>
-          <nav className=" font-bold text-sm flex flex-row gap-4">
-            <Link to= "/login">Giriş Yap</Link>
-            <Link to= "/signup">Kayıt Ol</Link>
-          </nav>
-        </header>
+        <Header/>
       </div>
       <div className="pt-6 pb-12">
-        <main className="container mx-auto bg-white min-h-96 rounded-xl shadow-xl p-6">
+        <main className= {`${className} flex flex-col items-center gap-6`}>
           {children}
         </main>
       </div>
