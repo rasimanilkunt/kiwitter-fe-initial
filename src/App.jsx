@@ -4,6 +4,7 @@ import PageLayout from "./layouts/PageLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import './utlis/devserver';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <PageLayout>Twit detail</PageLayout>
         </Route>
       </Switch>
+      <ToastContainer/>
     </div>
   );
 }
