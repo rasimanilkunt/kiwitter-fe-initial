@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import PageLayout from "./layouts/PageLayout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import './utlis/devserver';
+import './utils/devserver';
 import { ToastContainer } from 'react-toastify';
 
 function App() {

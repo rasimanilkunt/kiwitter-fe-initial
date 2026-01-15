@@ -1,6 +1,6 @@
 import AuthLayout from "../layouts/AuthLayout";
 import { useForm } from "react-hook-form";
-import axios from "../utlis/axios";
+import axios from "../utils/axios";
 
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
