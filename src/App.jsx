@@ -1,8 +1,8 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import PageLayout from "./PageLayout";
-import Login from "./Login";
-import Signup from "./Signup";
+import PageLayout from "./layouts/PageLayout";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import './utlis/devserver';
 
 function App() {
